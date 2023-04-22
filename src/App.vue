@@ -20,21 +20,33 @@
     </div>
   </div>
 </nav>
-
-<!-- <Introduce/> -->
-
-<!-- <router-link to="/list">리스트페이지</router-link> -->
-<div class="mt-4">
-  <router-view :블로그글="블로그글"></router-view>
+<!--하단측 큰 박스  -->
+<div class="under-bg-box">
+<!-- 좌측 프로필 박스 -->
+<div class="left-box">
+  <div class="image-box">
+    <img class="image" src="./assets/KakaoTalk_20230419_131406205.jpg">
+  </div>
+  <div class="introdunction">
+    <h5>셔닝</h5>
+    <p>안녕하세요. 패션/맛집 블로거 셔닙니당!<br>
+       서이추 대환영입니다 ㅎㅎ !!
+    </p>
+  </div>
 </div>
-<!-- 부모 컴포넌트에서 자식 컴포넌트로 데이터 보내기 -->
+<!-- <router-link to="/list">리스트페이지</router-link> -->
+
+  <!-- 부모 컴포넌트에서 자식 컴포넌트로 데이터 보내기 -->
+  <router-view :블로그글="블로그글"></router-view>
+
+</div>
 </template>
 
 
 <script>
-// import MyList from './components/MyList.vue';
+
 import Blog from './assets/Blog.js';
-// import Introduce from './components/MyHome.vue';
+
 
 export default {
   name: 'App',
@@ -43,9 +55,6 @@ export default {
      블로그글 : Blog,
     }
   },
-  //  components : {
-  //    Introduce : Introduce,
-  //  },
 }
 </script>
 
@@ -59,23 +68,76 @@ export default {
   
 }
 
+body{
+  height: 100vh;
+  margin: 0px;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+.under-bg-box{
+  width: 100%;
+  height: 100%;
+}
+
 .title-box{
   /* background: lightskyblue; */
-  height: 150px;
+  height: 170px;
   color: black;
   text-align: center;
   padding-top: 50px; 
 }
 
 .title{
-  background: lightcoral;
+  background: lightsalmon;
   width: 20%;
   margin: auto;
   height: 40%;
+  color: white;
 }
 
 .container-fluid{
-  background: lightgray;
+  background: lightsalmon;
 }
 
+.container-fluid a{
+  color: white;
+  font-weight: bold;
+}
+
+.left-box{
+  float: left;
+  width: 18%;
+  height: 730px;
+  background: white;
+  margin: 0px;
+}
+
+/* .right-box{
+   float: left;
+   width: auto;
+   height: auto;
+   background: lightcyan;
+} */
+
+.image-box{
+  width: 80%;
+  height: 35%;
+  margin: 15px auto;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.introdunction{
+  margin : 20px
+}
+.introdunction p{
+  /* font-weight: bold; */
+}
 </style>
