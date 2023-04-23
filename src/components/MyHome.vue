@@ -2,16 +2,16 @@
   <div class="right-box">
   <h4>일상 끄적끄적</h4>
   <div class="content-list-box">
-      <div class="content-box" v-for="i in 8" :key="i">
+      <div class="content-box" v-for="a,i in 블로그글" :key="i">
         <div class="img-box">
-          <img class="img" src="../assets/KakaoTalk_20230419_131406205.jpg">
+          <img @click="$router.push('/detail/' + i)" class="img" :src="블로그글[i].image">
         </div>
-        <div class="right-content-box">
+        <div @click="$router.push('/detail/' + i)" class="right-content-box">
           <div class="content-title">
-            <h3>목동 맛집 : 일미락 ~~~ 데이트 코스로 추천!</h3>
+            <h3>{{블로그글[i].title}}</h3>
           </div>
           <div class="content">
-            <p>제가 오늘은 목동 맛집을 다녀왔는데요~~~어쩌구</p>
+            <p>{{블로그글[i].content}}</p>
           </div>
           <div class="date">
             <p>2023.04.23</p>
@@ -27,7 +27,10 @@
 
 <script>
 export default {
-
+  // 부모 컴포넌트로부터 받은 데이터 등록하기
+  props : {
+    블로그글 : Array,
+  }
 }
 </script>
 
@@ -40,13 +43,19 @@ div{
    height: 100vh;
    margin-left: 18%;
    background: white;
+   padding-left: 70px; 
 }
 
+.right-box h4{
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 25px;
+}
 
 .content-box{
   padding: 15px;
   margin: 10px;
-  width: 80% ;
+  width: 100% ;
   height: 200px;
   background: white;
   border-bottom: 2px solid lightsalmon;

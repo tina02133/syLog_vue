@@ -1,21 +1,35 @@
 <template>
 <!-- {{$route.params.id}} -->
-    <div>
-        <h4>상세페이지</h4>
-        <h5>{{블로그글[$route.params.id].title}}</h5>
+    <div class="right-box">
+        <!-- <h4>상세페이지</h4> -->
+        <h3>{{블로그글[$route.params.id].title}}</h3>
+        <p><strong>셔닝</strong>   2023.04.23</p>
+        <hr>
         <p>{{블로그글[$route.params.id].content}}</p>
     </div>
 </template>
 
 <script>
 export default {
+    // 부모 컴포넌트로부터 전달받은 데이터 props로 등록하기 
+    // (전송 시 등록했던)이름 : 데이터형식
     props :{
-    // 이름 : 데이터형식
     블로그글 : Array,
   }
 }
 </script>
 
 <style>
+
+.right-box{
+   height: 100vh;
+   margin-left: 18%;
+   background: white;
+   padding: 70px; 
+}
+
+.right-box h3, p{
+    text-align: left;
+}
 
 </style>

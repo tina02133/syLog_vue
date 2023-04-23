@@ -1,6 +1,8 @@
 <template>
 <div class="title-box">
+  <router-link style="text-decoration: none;" to="/">
   <h1 class="title"><span>Siyeon.log</span></h1>
+  </router-link>
 </div>
  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -25,7 +27,7 @@
 <!-- 좌측 프로필 박스 -->
 <div class="left-box">
   <div class="image-box">
-    <img class="image" src="./assets/KakaoTalk_20230419_131406205.jpg">
+    <img class="image" src="./assets/profile.jpg">
   </div>
   <div class="introdunction">
     <h5>셔닝</h5>
@@ -36,7 +38,7 @@
 </div>
 <!-- <router-link to="/list">리스트페이지</router-link> -->
 
-  <!-- 부모 컴포넌트에서 자식 컴포넌트로 데이터 보내기 -->
+  <!-- 등록한 데이터를 부모 컴포넌트에서 자식 컴포넌트로 데이터 보내기 -->
   <router-view :블로그글="블로그글"></router-view>
 
 </div>
@@ -45,6 +47,7 @@
 
 <script>
 
+// Blog.js 로부터 데이터 import 하기 
 import Blog from './assets/Blog.js';
 
 
@@ -52,6 +55,7 @@ export default {
   name: 'App',
   data(){
     return{ 
+      // Blog.js 로부터 import 받은 데이터 등록하기
      블로그글 : Blog,
     }
   },
@@ -113,18 +117,13 @@ div{
   height: 730px;
   background: white;
   margin: 0px;
+  border-left: solid 2px lightsalmon;
 }
 
-/* .right-box{
-   float: left;
-   width: auto;
-   height: auto;
-   background: lightcyan;
-} */
 
 .image-box{
+  height: 30%;
   width: 80%;
-  height: 35%;
   margin: 15px auto;
 }
 
@@ -137,7 +136,6 @@ div{
 .introdunction{
   margin : 20px
 }
-.introdunction p{
-  /* font-weight: bold; */
-}
+
+
 </style>
