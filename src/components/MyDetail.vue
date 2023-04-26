@@ -5,7 +5,10 @@
         <h3>{{블로그글[$route.params.id].title}}</h3>
         <p><strong>셔닝</strong>   2023.04.23</p>
         <hr>
-        <p>{{블로그글[$route.params.id].content}}</p>
+            <div class="detail-image-box">
+                <img :src="블로그글[$route.params.id].image">
+            </div>     
+            <p>{{블로그글[$route.params.id].content}}</p>
     </div>
 </template>
 
@@ -31,5 +34,19 @@ export default {
 .right-box h3, p{
     text-align: left;
 }
+
+.detail-image-box{
+    width: 500px;
+    height:500px;
+}
+
+.detail-image-box img{
+    width: 100%;
+    height: 100%;
+
+}
+/* .content-box{
+    text-align: center;
+} */
 
 </style>

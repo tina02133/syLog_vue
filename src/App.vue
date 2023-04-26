@@ -12,12 +12,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        <router-link to="/list" style="text-decoration:none;">
         <li class="nav-item">
           <a class="nav-link" href="#">List</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+        </router-link>
       </ul>
     </div>
   </div>
@@ -30,7 +29,8 @@
     <img class="image" src="./assets/profile.jpg">
   </div>
   <div class="introdunction">
-    <h5>셔닝</h5>
+    <h5>셔닝(tina02133)</h5>
+    <hr>
     <p>안녕하세요. 패션/맛집 블로거 셔닙니당!<br>
        서이추 대환영입니다 ㅎㅎ !!
     </p>
@@ -87,19 +87,27 @@ div{
 }
 
 .title-box{
-  /* background: lightskyblue; */
-  height: 170px;
-  color: black;
+  height: 200px;
+  width: 200px;
   text-align: center;
-  padding-top: 50px; 
+  margin: 0px auto;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+.title-box:hover{
+  transform: rotateY(180deg);
 }
 
 .title{
   background: lightsalmon;
-  width: 20%;
+  width: 100%;
+  height: 100%;
   margin: auto;
-  height: 40%;
   color: white;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 70px;
 }
 
 .container-fluid{
@@ -117,7 +125,7 @@ div{
   height: 730px;
   background: white;
   margin: 0px;
-  border-left: solid 2px lightsalmon;
+  border-right: 2px solid lightsalmon; 
 }
 
 
@@ -130,7 +138,7 @@ div{
 .image{
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+
 }
 
 .introdunction{

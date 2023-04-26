@@ -1,28 +1,59 @@
 <template>
+<!-- 인스타그램 피드형식으로 메인페이지 꾸미기 -->
   <div class="right-box">
-  <h4>일상 끄적끄적</h4>
-  <div class="content-list-box">
-      <div class="content-box" v-for="a,i in 블로그글" :key="i">
-        <div class="img-box">
-          <img @click="$router.push('/detail/' + i)" class="img" :src="블로그글[i].image">
+  <h4>안녕하세요 패션뷰티 블로거 셔니 입니당~</h4>
+  <hr>
+    <div class="item-content-box">
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
         </div>
-        <div @click="$router.push('/detail/' + i)" class="right-content-box">
-          <div class="content-title">
-            <h3>{{블로그글[i].title}}</h3>
-          </div>
-          <div class="content">
-            <p>{{블로그글[i].content}}</p>
-          </div>
-          <div class="date">
-            <p>2023.04.23</p>
-          </div>
-        </div>
-        <div style="clear: both;"></div>
-        <!-- <hr> -->
+        <img class="item-img" src="../assets/sushi.jpg" alt="">
       </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/sf.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/ring.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/cow.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/coffee.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/hyundai.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/sushi.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="overlay-black">
+           <span>블라블라</span> 
+        </div>
+        <img class="item-img" src="../assets/ring.jpg" alt="">
+      </div>
+    </div>
   </div>
-</div>
-<div style="clear: both;"></div>
 </template>
 
 <script>
@@ -52,34 +83,50 @@ div{
   margin-left: 25px;
 }
 
-.content-box{
-  padding: 15px;
-  margin: 10px;
-  width: 100% ;
-  height: 200px;
-  background: white;
-  border-bottom: 2px solid lightsalmon;
+.item-content-box{
+  width:90%;
+  height:90%;
+  padding: 10px;
+  margin: auto;
 }
 
-.img-box{
+/* item 감싸는  div */
+.item{
   float: left;
-  width: 170px;
-  margin: 0px auto;
-  padding: 10px; 
-  height: 170px;
+  width: 23%;
+  margin: 5px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  /* box-sizing: content-box; */
+  
 }
 
-.img{ 
+ .item-img{
+  /* position: absolute; */
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
 }
 
-.right-content-box{
-  margin-top: 15px;
-  float: left;
-  text-align: left;
+.overlay-black{
+  position: absolute;
+  width : 100%;
+  height : 100%;
+  padding-top: 50px;
+  background : rgba(0,0,0,0.3);
+  opacity: 0;
 }
+.item:hover .overlay-black{
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.6s;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+          
+
 
 
 </style>
