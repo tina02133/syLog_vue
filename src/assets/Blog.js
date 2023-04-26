@@ -1,6 +1,6 @@
 export default [
     { 
-      title : '[스시다마 / 목동 맛집 추천] 분위기 내고 싶은 날엔 스시오마카세',
+      title : '[사시미야센 / 목동 맛집 추천] 분위기 내고 싶은 날엔 스시오마카세',
       content : '여러분 하이 ~ 오늘 소개할 맛집은 스시다마입니당~~',
       date : 'September 24, 2021',
       // require 다시 공부해보기 
@@ -13,9 +13,9 @@ export default [
       date : 'October 20, 2020',
       number : 1,
     },{ 
-      title : '[샌프란시스코 / 마약 여행지 추천 ]',
-      content : '부촌과 마약마을 그 어딘가를 경험하고 싶다면 샌프란으로~',
-      date : 'April 24, 2019',
+      title : '[샌프란시스코 / 도심 힐링 여행지 추천 ]',
+      content : '미국을 제대로 경험하고 싶다면 샌프란으로~',
+      date : 'Febuary 13, 2023',
       image : require('../assets/sf.jpg'),
       number : 2,
     },{ 
@@ -27,20 +27,26 @@ export default [
     },{ 
       title : '[에스프레소바 / 요즘 유행하는 에스프레소바 추천 ]',
       content : '맛있는 초콜렛 에스프레소 ',
-      date : 'April 24, 2019',
+      date : 'August 17, 2022',
       image : require('../assets/coffee.jpg'),
       number : 4,
     },{ 
       title : '[공쥬 / 꺄아아아 내새끼 바비 소개  ]',
       content : '우리바비 내새끼 ',
-      date : 'April 24, 2019',
+      date : 'January 13, 2023',
       image :require('../assets/dog.jpg'),
       number : 5,
     },{ 
       title : '[강아지 트리 / 더현대 크리스마스 데코 ]',
       content : '2022 더현대의 크리스마스 트리 ',
       image : require('../assets/hyundai.jpg'),
-      date : 'April 24, 2019',
+      date : 'December 10, 2020',
+      number : 6,
+    },{ 
+      title : '[목동 파리공원 / 튤립 축제 ]',
+      content : '봄맞이 튤립을 깔았더니 너무너무 예쁘네요~~~ ',
+      image : require('../assets/flower.jpg'),
+      date : 'March 24, 2023',
       number : 6,
     }
   ] 

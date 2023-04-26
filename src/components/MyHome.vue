@@ -1,56 +1,16 @@
 <template>
 <!-- 인스타그램 피드형식으로 메인페이지 꾸미기 -->
   <div class="right-box">
-  <h4>안녕하세요 패션뷰티 블로거 셔니 입니당~</h4>
+  <h4 style="font-family : fantasy ">안녕하세요 패션뷰티 블로거 셔니 입니당~</h4>
   <hr>
     <div class="item-content-box">
-      <div class="item">
+      <div @click="$router.push('/detail/'+i)" class="item" v-for="a,i in 블로그글" :key=i>
         <div class="overlay-black">
-           <span>블라블라</span> 
+           <span class="item-title">{{블로그글[i].title}}</span>
+           <hr> 
+           <span>{{블로그글[i].date}}</span> 
         </div>
-        <img class="item-img" src="../assets/sushi.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/sf.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/ring.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/cow.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/coffee.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/hyundai.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/sushi.jpg" alt="">
-      </div>
-      <div class="item">
-        <div class="overlay-black">
-           <span>블라블라</span> 
-        </div>
-        <img class="item-img" src="../assets/ring.jpg" alt="">
+        <img class="item-img" :src="블로그글[i].image" alt="">
       </div>
     </div>
   </div>
@@ -121,8 +81,12 @@ div{
   z-index: 1;
   transition: all 0.6s;
   color: white;
-  font-weight: bold;
-  font-size: 20px;
+  /* font-weight: bold; */
+  font-size: 15px;
+}
+
+.item-title{
+  font-size: 18px;
 }
 
           

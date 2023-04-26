@@ -6,7 +6,9 @@
 </div>
  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Home</a>
+    <router-link style="text-decoration:none" to="/MyHome" >
+      <a class="navbar-brand" href="#">Home</a>
+    </router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,7 +33,7 @@
   <div class="introdunction">
     <h5>셔닝(tina02133)</h5>
     <hr>
-    <p>안녕하세요. 패션/맛집 블로거 셔닙니당!<br>
+    <p style="font-family : fantasy ">안녕하세요. 패션/맛집 블로거 셔닙니당!<br>
        서이추 대환영입니다 ㅎㅎ !!
     </p>
   </div>
@@ -145,5 +147,8 @@ div{
   margin : 20px
 }
 
+.title-box{
+  /* background: #49d69b; */
+}
 
 </style>
