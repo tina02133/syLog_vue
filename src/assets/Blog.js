@@ -47,6 +47,6 @@ export default [
       content : '봄맞이 튤립을 깔았더니 너무너무 예쁘네요~~~ ',
       image : require('../assets/flower.jpg'),
       date : 'March 24, 2023',
-      number : 6,
+      number : 7,
     }
   ] 

@@ -2,13 +2,13 @@
 <!-- {{$route.params.id}} -->
     <div class="right-box">
         <!-- <h4>상세페이지</h4> -->
-        <h3>{{블로그글[$route.params.id].title}}</h3>
+        <h3>{{blogPost[$route.params.id].title}}</h3>
         <p><strong>셔닝</strong>   2023.04.23</p>
         <hr>
             <div class="detail-image-box">
-                <img :src="블로그글[$route.params.id].image">
+                <img :src="blogPost[$route.params.id].image">
             </div>     
-            <p>{{블로그글[$route.params.id].content}}</p>
+            <p>{{blogPost[$route.params.id].content}}</p>
     </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     // 부모 컴포넌트로부터 전달받은 데이터 props로 등록하기 
     // (전송 시 등록했던)이름 : 데이터형식
     props :{
-    블로그글 : Array,
+    blogPost : Array,
   }
 }
 </script>

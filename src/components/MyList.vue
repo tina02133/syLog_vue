@@ -3,16 +3,16 @@
   <h4>일상 끄적끄적</h4>
   <hr>
   <div class="content-list-box">
-      <div class="content-box" v-for="a,i in 블로그글" :key="i">
+      <div class="content-box" v-for="a,i in blogPost" :key="i">
         <div class="img-box">
-          <img @click="$router.push('/detail/' + i)" class="img" :src="블로그글[i].image">
+          <img @click="$router.push('/detail/' + i)" class="img" :src="blogPost[i].image">
         </div>
         <div @click="$router.push('/detail/' + i)" class="right-content-box">
           <div class="content-title">
-            <h3>{{블로그글[i].title}}</h3>
+            <h3>{{blogPost[i].title}}</h3>
           </div>
           <div class="content">
-            <p>{{블로그글[i].content}}</p>
+            <p>{{blogPost[i].content}}</p>
           </div>
           <div class="date">
             <p>2023.04.23</p>
@@ -30,7 +30,7 @@
 export default {
   // 부모 컴포넌트로부터 받은 데이터 등록하기
   props : {
-    블로그글 : Array,
+    blogPost : Array,
   }
 }
 </script>

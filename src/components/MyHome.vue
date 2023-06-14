@@ -1,16 +1,18 @@
 <template>
 <!-- 인스타그램 피드형식으로 메인페이지 꾸미기 -->
   <div class="right-box">
-  <h4 style="font-family : fantasy ">안녕하세요 패션뷰티 블로거 셔니 입니당~</h4>
+   <div class="introTextBox"> 
+      <h4>안녕하세요 패션 / 여행 블로거 셔니 입니당~</h4>
+   </div>
   <hr>
     <div class="item-content-box">
-      <div @click="$router.push('/detail/'+i)" class="item" v-for="a,i in 블로그글" :key=i>
+      <div @click="$router.push('/detail/'+i)" class="item" v-for="a,i in blogPost" :key=i>
         <div class="overlay-black">
-           <span class="item-title">{{블로그글[i].title}}</span>
+           <span class="item-title">{{blogPost[i].title}}</span>
            <hr> 
-           <span>{{블로그글[i].date}}</span> 
+           <span>{{blogPost[i].date}}</span> 
         </div>
-        <img class="item-img" :src="블로그글[i].image" alt="">
+        <img class="item-img" :src="blogPost[i].image" alt="">
       </div>
     </div>
   </div>
@@ -20,7 +22,7 @@
 export default {
   // 부모 컴포넌트로부터 받은 데이터 등록하기
   props : {
-    블로그글 : Array,
+    blogPost : Array,
   }
 }
 </script>
@@ -89,6 +91,10 @@ div{
   font-size: 18px;
 }
 
+.introTextBox h4{
+  /* display: flex; */
+  text-align: center;
+}
           
 
 

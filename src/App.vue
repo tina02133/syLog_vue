@@ -1,4 +1,9 @@
+<style>
+/* ==> main.css import */
+@import "./assets/main.css";
+</style>
 <template>
+<!-- ==> navbar -->
 <div class="title-box">
   <router-link style="text-decoration: none;" to="/">
   <h1 class="title"><span>Siyeon.log</span></h1>
@@ -23,9 +28,9 @@
     </div>
   </div>
 </nav>
-<!--하단측 큰 박스  -->
+<!--==> 하단측 큰 박스  -->
 <div class="under-bg-box">
-<!-- 좌측 프로필 박스 -->
+<!--==> 좌측 프로필 박스 -->
 <div class="left-box">
   <div class="image-box">
     <img class="image" src="./assets/profile.jpg">
@@ -38,117 +43,24 @@
     </p>
   </div>
 </div>
-<!-- <router-link to="/list">리스트페이지</router-link> -->
 
-  <!-- 등록한 데이터를 부모 컴포넌트에서 자식 컴포넌트로 데이터 보내기 -->
-  <router-view :블로그글="블로그글"></router-view>
-
+  <!-- ==> 등록한 데이터를 부모 컴포넌트에서 자식 컴포넌트로 데이터 보내기 -->
+  <router-view :blogPost="blogPost"></router-view>
 </div>
 </template>
-
 
 <script>
 
 // Blog.js 로부터 데이터 import 하기 
 import Blog from './assets/Blog.js';
 
-
 export default {
   name: 'App',
   data(){
     return{ 
       // Blog.js 로부터 import 받은 데이터 등록하기
-     블로그글 : Blog,
+     blogPost : Blog,
     }
   },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  
-}
-
-body{
-  height: 100vh;
-  margin: 0px;
-}
-
-div{
-  box-sizing: border-box;
-}
-
-.under-bg-box{
-  width: 100%;
-  height: 100%;
-}
-
-.title-box{
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  margin: 0px auto;
-  transform-style: preserve-3d;
-  transition: all 1s;
-}
-
-.title-box:hover{
-  transform: rotateY(180deg);
-}
-
-.title{
-  background: lightsalmon;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  padding-top: 70px;
-}
-
-.container-fluid{
-  background: lightsalmon;
-}
-
-.container-fluid a{
-  color: white;
-  font-weight: bold;
-}
-
-.left-box{
-  float: left;
-  width: 18%;
-  height: 730px;
-  background: white;
-  margin: 0px;
-  border-right: 2px solid lightsalmon; 
-}
-
-
-.image-box{
-  height: 30%;
-  width: 80%;
-  margin: 15px auto;
-}
-
-.image{
-  width: 100%;
-  height: 100%;
-
-}
-
-.introdunction{
-  margin : 20px
-}
-
-.title-box{
-  /* background: #49d69b; */
-}
-
-</style>
